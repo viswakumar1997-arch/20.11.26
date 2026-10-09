@@ -2,80 +2,116 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
-  padding: 30px 15px;
-  font-family: Georgia, serif;
+  padding: 25px 15px;
+  font-family: Georgia, "Times New Roman", serif;
   text-align: center;
-  color: #633047;
-  background:
-    radial-gradient(ellipse at top, #fffdf5, transparent 70%),
-    linear-gradient(135deg, #f9e4e8, #fff8ed, #f5dce4);
+  color: #6d2943;
+  background: linear-gradient(
+    135deg,
+    #f5dfe5,
+    #fffaf0,
+    #f3d8df,
+    #fff8ed
+  );
 }
 
-body::before {
-  content: "❀  ✧  ❀  ✧  ❀";
-  display: block;
-  color: #b58a48;
+.invitation {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 35px 22px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 253, 247, 0.96);
+  border: 3px double #bd9654;
+  outline: 1px solid #bd9654;
+  outline-offset: 6px;
+  box-shadow: 0 10px 35px rgba(91, 35, 55, 0.15);
+  animation: appear 1.5s ease;
+}
+
+.top-decoration,
+.bottom-decoration {
+  color: #b58b45;
   font-size: 25px;
-  letter-spacing: 8px;
-  margin: 15px auto 30px;
+  letter-spacing: 4px;
+}
+
+.welcome {
+  margin-top: 25px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #987343;
 }
 
 h1 {
-  font-size: clamp(32px, 8vw, 48px);
-  line-height: 1.4;
-  color: #8d294d;
-  margin: 20px 0;
-  animation: fadeIn 2s ease;
+  margin: 30px 0;
+  font-size: clamp(27px, 7vw, 42px);
+  line-height: 1.5;
+  color: #7e2444;
+  overflow-wrap: anywhere;
+}
+
+h1 span {
+  display: inline-block;
+  color: #b88a45;
+  font-size: 0.8em;
+  padding: 0 5px;
+}
+
+.love-message {
+  font-size: 17px;
+  line-height: 2;
+  color: #82435a;
+}
+
+.divider {
+  margin: 28px 0;
+  color: #bd9654;
+  font-size: 25px;
 }
 
 h2 {
-  font-size: clamp(21px, 5vw, 29px);
+  margin-top: 25px;
+  font-size: 25px;
   font-weight: normal;
-  color: #a77a35;
-  margin: 25px 0 12px;
+  color: #a47a39;
 }
 
 p {
-  font-size: 17px;
   line-height: 1.8;
-  margin: 15px 0;
 }
 
-h1,
-h2,
-p {
-  animation: fadeIn 1.5s ease both;
+.date {
+  font-size: 20px;
+  font-weight: bold;
+  color: #842747;
 }
 
-body::after {
-  content: "❀";
-  display: block;
-  margin: 35px auto 10px;
-  font-size: 38px;
-  color: #b58a48;
+.venue {
+  margin-top: 22px;
+  font-size: 21px;
+  font-weight: bold;
+  color: #7e2444;
 }
 
-@keyframes fadeIn {
+.closing {
+  margin-top: 30px;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.bottom-decoration {
+  margin-top: 35px;
+  font-size: 19px;
+}
+
+@keyframes appear {
   from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    padding: 20px 18px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-}
+    opacity: 
