@@ -24,21 +24,38 @@
       And Now, Forever Begins… 💍
     </p>
 
+    <!-- Wedding Music -->
+    <div style="margin: 25px 0;">
+      <audio id="weddingMusic" loop preload="metadata">
+        <source src="Is%20It%20Love%20Bgm.mp3" type="audio/mpeg">
+      </audio>
+
+      <button
+        id="musicButton"
+        type="button"
+        style="background:#8d2948;color:white;padding:14px 25px;border:1px solid #bd9654;border-radius:30px;font-size:16px;cursor:pointer;"
+      >
+        🎵 Play Wedding Music
+      </button>
+    </div>
+
     <div class="divider">❧ ❀ ❧</div>
 
     <h2>Wedding Ceremony</h2>
 
     <p class="date">20 November 2026</p>
+
     <p>9:00 AM – 10:30 AM</p>
 
     <p class="venue">Deva Kalyana Mahal</p>
+
     <p>Ottapidaram, Thoothukudi, Tamil Nadu</p>
 
     <a
       href="https://www.google.com/maps/search/?api=1&query=Deva+Kalyana+Mahal+Ottapidaram+Thoothukudi+Tamil+Nadu"
       target="_blank"
       rel="noopener noreferrer"
-      style="display:inline-block;background:#8d2948;color:white;padding:12px 24px;border-radius:30px;text-decoration:none;margin:15px;font-size:16px;"
+      style="display:inline-block;background:#8d2948;color:white;padding:12px 24px;border-radius:30px;text-decoration:none;margin:15px;"
     >
       📍 View Venue on Google Maps
     </a>
@@ -48,6 +65,7 @@
     <h2>Reception</h2>
 
     <p class="date">21 November 2026</p>
+
     <p>9:30 AM – 10:30 AM</p>
 
     <div class="divider">❀</div>
@@ -59,5 +77,29 @@
     <p class="bottom-decoration">❦ Forever Begins ❦</p>
 
   </main>
+
+  <script>
+    const music = document.getElementById("weddingMusic");
+    const button = document.getElementById("musicButton");
+
+    button.addEventListener("click", async function () {
+      if (music.paused) {
+        try {
+          await music.play();
+          button.textContent = "⏸ Pause Wedding Music";
+        } catch (error) {
+          button.textContent = "🎵 Tap to Play Music Again";
+        }
+      } else {
+        music.pause();
+        button.textContent = "🎵 Play Wedding Music";
+      }
+    });
+
+    music.addEventListener("ended", function () {
+      button.textContent = "🎵 Play Wedding Music";
+    });
+  </script>
+
 </body>
 </html>
