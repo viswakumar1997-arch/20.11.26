@@ -1,25 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-margin: 0;
-padding: 0;
-font-family: Georgia, serif;
-text-align: center;
-color: #5a2638;
-background: #fff5f5;
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px 15px;
+  font-family: Georgia, serif;
+  text-align: center;
+  color: #633047;
+  background:
+    radial-gradient(ellipse at top, #fffdf5, transparent 70%),
+    linear-gradient(135deg, #f9e4e8, #fff8ed, #f5dce4);
+}
+
+body::before {
+  content: "❀  ✧  ❀  ✧  ❀";
+  display: block;
+  color: #b58a48;
+  font-size: 25px;
+  letter-spacing: 8px;
+  margin: 15px auto 30px;
 }
 
 h1 {
-font-size: 36px;
-color: #9b2948;
-margin-top: 60px;
+  font-size: clamp(32px, 8vw, 48px);
+  line-height: 1.4;
+  color: #8d294d;
+  margin: 20px 0;
+  animation: fadeIn 2s ease;
 }
 
 h2 {
-color: #b8860b;
-font-size: 24px;
+  font-size: clamp(21px, 5vw, 29px);
+  font-weight: normal;
+  color: #a77a35;
+  margin: 25px 0 12px;
 }
 
 p {
-font-size: 18px;
-line-height: 1.8;
-margin: 15px;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 15px 0;
+}
+
+h1,
+h2,
+p {
+  animation: fadeIn 1.5s ease both;
+}
+
+body::after {
+  content: "❀";
+  display: block;
+  margin: 35px auto 10px;
+  font-size: 38px;
+  color: #b58a48;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 18px;
+  }
+
+  p {
+    font-size: 16px;
+  }
 }
