@@ -1,0 +1,25 @@
+body {
+margin: 0;
+padding: 0;
+font-family: Georgia, serif;
+text-align: center;
+color: #5a2638;
+background: #fff5f5;
+}
+
+h1 {
+font-size: 36px;
+color: #9b2948;
+margin-top: 60px;
+}
+
+h2 {
+color: #b8860b;
+font-size: 24px;
+}
+
+p {
+font-size: 18px;
+line-height: 1.8;
+margin: 15px;
+}
