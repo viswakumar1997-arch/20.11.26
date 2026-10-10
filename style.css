@@ -9,79 +9,70 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  padding: 25px 15px;
+  padding: 30px 16px;
   font-family: Georgia, "Times New Roman", serif;
   text-align: center;
-  color: #6d2943;
-  background: linear-gradient(
-    135deg,
-    #f5dfe5,
-    #fffaf0,
-    #f3d8df,
-    #fff8ed
-  );
+  color: #71324b;
+  background: linear-gradient(135deg, #f3dce3, #fff8ef, #f1d8df);
 }
 
 .invitation {
-  max-width: 600px;
+  max-width: 620px;
   margin: 0 auto;
   padding: 35px 22px;
-  position: relative;
-  overflow: hidden;
-  background: rgba(255, 253, 247, 0.96);
-  border: 3px double #bd9654;
-  outline: 1px solid #bd9654;
-  outline-offset: 6px;
-  box-shadow: 0 10px 35px rgba(91, 35, 55, 0.15);
-  animation: appear 1.5s ease;
+  background: #fffdf7;
+  border: 3px double #b89555;
+  outline: 1px solid #b89555;
+  outline-offset: 5px;
+  box-shadow: 0 12px 35px rgba(87, 36, 54, 0.16);
+  animation: fadeIn 1.4s ease both;
 }
 
 .top-decoration,
 .bottom-decoration {
-  color: #b58b45;
-  font-size: 25px;
+  color: #b28b49;
+  font-size: 24px;
   letter-spacing: 4px;
 }
 
 .welcome {
   margin-top: 25px;
+  color: #987342;
   font-size: 12px;
   letter-spacing: 3px;
-  color: #987343;
 }
 
 h1 {
-  margin: 30px 0;
-  font-size: clamp(27px, 7vw, 42px);
+  margin: 28px 0;
+  color: #842747;
+  font-size: clamp(26px, 7vw, 42px);
   line-height: 1.5;
-  color: #7e2444;
   overflow-wrap: anywhere;
 }
 
 h1 span {
+  color: #b68b45;
   display: inline-block;
-  color: #b88a45;
-  font-size: 0.8em;
-  padding: 0 5px;
+  padding: 0 3px;
 }
 
 .love-message {
+  color: #85425a;
   font-size: 17px;
   line-height: 2;
-  color: #82435a;
 }
 
 .divider {
   margin: 28px 0;
-  color: #bd9654;
+  color: #b89555;
   font-size: 25px;
 }
 
 h2 {
   margin-top: 25px;
+  color: #a17a3e;
   font-size: 25px;
   font-weight: normal;
-  color: #a47a39;
 }
 
 p {
@@ -89,16 +80,16 @@ p {
 }
 
 .date {
+  color: #842747;
   font-size: 20px;
   font-weight: bold;
-  color: #842747;
 }
 
 .venue {
   margin-top: 22px;
+  color: #842747;
   font-size: 21px;
   font-weight: bold;
-  color: #7e2444;
 }
 
 .closing {
@@ -112,6 +103,42 @@ p {
   font-size: 19px;
 }
 
-@keyframes appear {
+a,
+button {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+a:hover,
+button:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
   from {
-    opacity: 
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .invitation {
+    padding: 25px 14px;
+  }
+
+  .welcome {
+    letter-spacing: 2px;
+  }
+
+  .love-message {
+    font-size: 15px;
+  }
+}
